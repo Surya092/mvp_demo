@@ -11,73 +11,45 @@ import XCTest
 final class HomeViewControllerTest: XCTestCase {
     
     var storyboard: UIStoryboard!
-    var colorModel: HomePageColorModel!
+    var model: HomePageModel!
     
     override func setUp() {
         super.setUp()
         storyboard = UIStoryboard(name: "Main", bundle: nil)
-        colorModel = HomePageColorModel(topBtnColor: UIColor.red, middleBtnColor: UIColor.red, bottomBtnColor: UIColor.red)
+        model = HomePageModel(pageItems: ["Red", "Green", "Blue"], title: "Home Page")
+    }
+    
+    func test_navigationTitleSetup() {
+        let homeController = (storyboard.instantiateInitialViewController() as! UINavigationController).viewControllers.first as! HomeViewController
+        homeController.presenter.model = model
+        let _ = homeController.view
+        homeController.viewDidLoad()
+        XCTAssertEqual(homeController.navigationController?.navigationBar.topItem?.title, model.pageTitle)
     }
 
-    func test_topButtonColor() {
-        let homeController = storyboard.instantiateInitialViewController() as! HomeViewController
-        homeController.presenter.model = colorModel
+    func test_topCellSetup() {
+        let homeController = (storyboard.instantiateInitialViewController() as! UINavigationController).viewControllers.first as! HomeViewController
+        homeController.presenter.model = model
         let _ = homeController.view
         homeController.viewDidLoad()
-        XCTAssertTrue(homeController.topButton.backgroundColor == colorModel.topButtonColor)
+        XCTAssertEqual(homeController.tableView(homeController.homeTableView, cellForRowAt: IndexPath(row: 0, section: 0)).textLabel?.text, model.items[0])
     }
     
-    func test_MiddleButtonColor() {
-        let homeController = storyboard.instantiateInitialViewController() as! HomeViewController
-        homeController.presenter.model = colorModel
+    func test_MiddleCellSetup() {
+        let homeController = (storyboard.instantiateInitialViewController() as! UINavigationController).viewControllers.first as! HomeViewController
+        homeController.presenter.model = model
         let _ = homeController.view
         homeController.viewDidLoad()
-        XCTAssertTrue(homeController.middleButton.backgroundColor == colorModel.middleButtonColor)
+        XCTAssertEqual(homeController.tableView(homeController.homeTableView, cellForRowAt: IndexPath(row: 1, section: 0)).textLabel?.text, model.items[1])
     }
     
-    func test_BottomButtonColor() {
-        let homeController = storyboard.instantiateInitialViewController() as! HomeViewController
-        homeController.presenter.model = colorModel
+    func test_BottomCellSetup() {
+        let homeController = (storyboard.instantiateInitialViewController() as! UINavigationController).viewControllers.first as! HomeViewController
+        homeController.presenter.model = model
         let _ = homeController.view
         homeController.viewDidLoad()
-        XCTAssertTrue(homeController.bottomButton.backgroundColor == colorModel.bottomButtonColor)
+        XCTAssertEqual(homeController.tableView(homeController.homeTableView, cellForRowAt: IndexPath(row: 2, section: 0)).textLabel?.text, model.items[2])
     }
-    
-    func test_noActionIdentification() {
-        let homeController = storyboard.instantiateInitialViewController() as! HomeViewController
-        homeController.presenter.model = colorModel
-        let _ = homeController.view
-        homeController.viewDidLoad()
-        XCTAssertEqual(homeController.buttonLabel.text, "No Button Tapped")
-    }
-    
-    func test_topButtonTapIdentification() {
-        let homeController = storyboard.instantiateInitialViewController() as! HomeViewController
-        homeController.presenter.model = colorModel
-        let _ = homeController.view
-        homeController.viewDidLoad()
-        homeController.topButtonTapped(homeController.topButton!)
-        XCTAssertEqual(homeController.buttonLabel.text, "Top Button Tapped")
-    }
-    
-    func test_middleButtonTapIdentification() {
-        let homeController = storyboard.instantiateInitialViewController() as! HomeViewController
-        homeController.presenter.model = colorModel
-        let _ = homeController.view
-        homeController.viewDidLoad()
-        homeController.middleButtonTapped(homeController.middleButton!)
-        XCTAssertEqual(homeController.buttonLabel.text, "Middle Button Tapped")
-    }
-    
-    func test_bottomButtonTapIdentification() {
-        let homeController = storyboard.instantiateInitialViewController() as! HomeViewController
-        homeController.presenter.model = colorModel
-        let _ = homeController.view
-        homeController.viewDidLoad()
-        homeController.bottomButtonTapped(homeController.bottomButton!)
-        XCTAssertEqual(homeController.buttonLabel.text, "Bottom Button Tapped")
-    }
-
 
 }
 
