@@ -43,6 +43,36 @@
             </objects>
             <point key="canvasLocation" x="956.48854961832058" y="3.5211267605633805"/>
         </scene>
+        <!--Landing Page View Controller-->
+        <scene sceneID="2up-vh-UoC">
+            <objects>
+                <viewController storyboardIdentifier="LandingPageViewController" id="cTe-e3-yHh" customClass="LandingPageViewController" customModule="mvpdemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yzf-5G-LiZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zR-NH-X8K">
+                                <rect key="frame" x="196.66666666666666" y="438.66666666666669" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PLh-hb-nvI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3zR-NH-X8K" firstAttribute="centerX" secondItem="PLh-hb-nvI" secondAttribute="centerX" id="O9k-Vv-nQD"/>
+                            <constraint firstItem="3zR-NH-X8K" firstAttribute="centerY" secondItem="PLh-hb-nvI" secondAttribute="centerY" id="sYH-rH-vgV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageLabel" destination="3zR-NH-X8K" id="OVL-XX-9Ch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfr-if-S7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="-6"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cfg-tY-ymd">
             <objects>

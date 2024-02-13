@@ -53,6 +53,10 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let label = presenter.getItemTitle(indexPath: indexPath)
+        let landingPageController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LandingPageViewController") as! LandingPageViewController
+        landingPageController.dataLabel = label
+        landingPageController.pageTitle = label
+        navigationController?.pushViewController(landingPageController, animated: true)
     }
 }
