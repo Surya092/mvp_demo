@@ -11,13 +11,12 @@ class LandingPageViewController: UIViewController {
     
     @IBOutlet weak var pageLabel: UILabel!
     
-    var dataLabel: String = ""
-    var pageTitle: String = ""
     var presenter: LandingPageViewPresenter!
+    var model: LandingPageModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = LandingPageViewPresenter(dataModel: LandingPageModel(label: dataLabel, title: pageTitle))
+        presenter = LandingPageViewPresenter(dataModel: model)
         presenter.delegate = self
         navigationController?.navigationBar.topItem?.title = presenter.getNavigationTitle()
         self.pageLabel.text = presenter.getPageLabel()

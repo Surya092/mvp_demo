@@ -10,6 +10,7 @@
 		8F45FEBB2B7B1D7000793ECB /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F45FEBA2B7B1D7000793ECB /* LandingPageViewController.swift */; };
 		8F45FEBD2B7B208F00793ECB /* LandingPageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F45FEBC2B7B208F00793ECB /* LandingPageViewPresenter.swift */; };
 		8F45FEBF2B7B211400793ECB /* LandingPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F45FEBE2B7B211400793ECB /* LandingPageModel.swift */; };
+		8F45FEC12B7B377D00793ECB /* LandingPageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F45FEC02B7B377D00793ECB /* LandingPageViewControllerTest.swift */; };
 		8FA165372B74F836004123E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA165362B74F836004123E4 /* AppDelegate.swift */; };
 		8FA165392B74F836004123E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA165382B74F836004123E4 /* SceneDelegate.swift */; };
 		8FA165402B74F838004123E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FA1653F2B74F838004123E4 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		8F45FEBA2B7B1D7000793ECB /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		8F45FEBC2B7B208F00793ECB /* LandingPageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewPresenter.swift; sourceTree = "<group>"; };
 		8F45FEBE2B7B211400793ECB /* LandingPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageModel.swift; sourceTree = "<group>"; };
+		8F45FEC02B7B377D00793ECB /* LandingPageViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewControllerTest.swift; sourceTree = "<group>"; };
 		8FA165332B74F836004123E4 /* mvpdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvpdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA165362B74F836004123E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FA165382B74F836004123E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8FA1654D2B74F838004123E4 /* HomeViewControllerTest.swift */,
+				8F45FEC02B7B377D00793ECB /* LandingPageViewControllerTest.swift */,
 			);
 			path = mvpdemoTests;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FA1654E2B74F838004123E4 /* HomeViewControllerTest.swift in Sources */,
+				8F45FEC12B7B377D00793ECB /* LandingPageViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
