@@ -16,8 +16,8 @@ class LandingPageViewPresenter {
     var model: LandingPageModel!
     var delegate: LandingPageViewPresenterProtocol!
     
-    init(dataModel: LandingPageModel) {
-        self.model = dataModel
+    init(label: String, title: String) {
+        self.model = LandingPageModel(label: label, title: title)
     }
     
     func getNavigationTitle() -> String {
