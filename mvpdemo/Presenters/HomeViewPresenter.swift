@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum LabelType{
-    case top
-    case middle
-    case bottom
-}
-
 protocol HomeViewPresenterProtocol {
     func updateTableView()
 }
